@@ -21,7 +21,9 @@ Requirements :
 6. Start the Evernote client
 7. Goto File / Import / Evernote Export files..
 8. Select the delicious.enex file
-9. It will start importing your bookmarks. At the end of it I still get an error that it can't import the note, but as far as I can see all notes have been imported.
+9. It will start importing your bookmarks. At the end of it I receive an error in Evernote "INVALID_NOTE_TAG" and that it couldn't import notes, but as far as I can see all notes have been imported. Not sure if that is a problem with the script, or something else, but since all notes have been imported for me, I won't investigate further.
+
+If you have a lot of bookmarks and tags, it may take a few minutes before the notes show up in the desktop client
 
 Have fun with it.
 
