@@ -1,0 +1,29 @@
+Delicious.com-to-Evernote
+
+After the leaked information on the sunset of Delicious.com, I was looking at an alternative. I just started playing with Evernote, so that would be a logical choice.
+
+(Update: Yahoo has since clarified that they are in talks to sell it off)
+
+Evernote mentioned a way of importing your Delicious bookmarks into Evernote, however this will create one single
+note with all the bookmarks in it. It will lose all the tags as well as the creation and update date and time.
+
+This Perl script will convert import all the bookmarks into individual notes with tags and creation dates in tact from an xml export from Delicious to an Evernote .enex file. This file can then be imported with the Evernote desktop client.
+
+Requirements :
+- Perl
+- Evernote client
+
+1. Go to delicious.com and log in to your account
+2. Copy and past the follwing URL : https://api.del.icio.us/v1/posts/all
+3. It will give a pop-up for your delicious account username / password. (del.icio.us is the old name before yahoo took it over and changed it to delicious.com)
+4. It will create a file called all.xml which contains all your bookmarks with tags, creation and update dates etc.
+5. Run the Perl script : perl Delicious.com-to-Evernote.pl > delicious.enex
+6. Start the Evernote client
+7. Goto File / Import / Evernote Export files..
+8. Select the delicious.enex file
+9. It will start importing your bookmarks. At the end of it I still get an error that it can't import the note, but as far as I can see all notes have been imported.
+
+Have fun with it.
+
+Richard Korff
+korffr.github-com@lifebyfood.com
