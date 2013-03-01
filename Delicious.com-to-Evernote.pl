@@ -2,6 +2,9 @@
 
 # use module
 use XML::Simple;
+use XML::LibXML;
+
+binmode(STDOUT, ':utf8');
 
 # create object
 $xml = new XML::Simple (KeyAttr=>[]);
@@ -11,9 +14,7 @@ $data = $xml->XMLin("all.xml");
 
 sub escape {
   my($str) = splice(@_);
-  $str =~ s/(\&)/sprintf("\&amp;amp;")/eg;
-  $str =~ s/(.)/(ord($1) > 127) ? " " : $1/egs;
-  return $str;
+  return XML::LibXML::Document->new('1.0', 'UTF-8')->createTextNode($str)->toString;
 }
 
 sub trim($)
