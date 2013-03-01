@@ -13,10 +13,15 @@ Requirements :
 - Perl
 - Evernote client
 
+export your delicious.com bookmarks to a xml file:
+
 1. Go to delicious.com and log in to your account
 2. Copy and past the follwing URL : https://api.del.icio.us/v1/posts/all
 3. It will give a pop-up for your delicious account username / password. (del.icio.us is the old name before yahoo took it over and changed it to delicious.com)
 4. It will create a file called all.xml which contains all your bookmarks with tags, creation and update dates etc.
+
+if you have over 1000 bookmarks, you should use this script: https://github.com/l0b0/export/blob/master/Delicious.sh
+
 5. Run the Perl script : perl Delicious.com-to-Evernote.pl > delicious.enex
 6. Start the Evernote client
 7. Goto File / Import / Evernote Export files..
